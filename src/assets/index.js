@@ -1,0 +1,10 @@
+export { default as HeroImg } from "./HeroImg.svg";
+export { default as AppstoreDownload } from "./downloadAppstore.svg";
+export { default as GoogleplayDownload } from "./downloadGoogleplay.svg";
+export { default as HeroPhone } from "./heroPhone.svg";
+export { default as Coins } from "./coins.svg";
+export { default as PaymentMethod } from "./paymentmethod.svg";
+export { default as socialMedia } from "./socialMedia.svg";
+export { default as star } from "./star.svg";
+export { default as creditCard } from "./creditCard.svg";
+export { default as trip } from "./trip.svg";
