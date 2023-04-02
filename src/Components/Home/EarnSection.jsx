@@ -1,5 +1,5 @@
 import React from "react";
-import { star, creditCard, trip } from "../assets/index";
+import { star, creditCard, trip } from "../../assets/index.js";
 
 const EarnSection = () => {
   return (

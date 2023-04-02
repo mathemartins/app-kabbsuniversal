@@ -1,5 +1,5 @@
 import React from "react";
-import { Coins, PaymentMethod } from "../assets/index";
+import { Coins, PaymentMethod } from "../../assets/index.js";
 
 const Payment = () => {
   return (

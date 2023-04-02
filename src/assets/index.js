@@ -8,3 +8,4 @@ export { default as socialMedia } from "./socialMedia.svg";
 export { default as star } from "./star.svg";
 export { default as creditCard } from "./creditCard.svg";
 export { default as trip } from "./trip.svg";
+export { default as googleIcon } from "./googleIcon.svg";

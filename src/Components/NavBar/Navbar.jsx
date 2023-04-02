@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { Link as AnchorLink } from "react-scroll";
 // import { Logo } from "../../assets/index";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -49,13 +49,19 @@ const Navbar = () => {
             <li>About Us</li>
           </ul>
           <div className="hidden xsm:flex gap-2 font-semibold">
-            <h2 className="bg-mainBlack border-[0.25px] border-mainWhite py-2 md:py-2 xsm:w-[8rem] rounded-3xl">
+            <Link
+              to={"/sign-in"}
+              className="bg-mainBlack border-[0.25px] border-mainWhite py-2 md:py-2 xsm:w-[8rem] rounded-3xl"
+            >
               Log in
-            </h2>
+            </Link>
 
-            <h2 className="bg-secondary flex gap-2 items-center justify-center py-2 md:py-2 xsm:w-[8rem] rounded-3xl">
+            <Link
+              to={"/register"}
+              className="bg-secondary flex gap-2 items-center justify-center py-2 md:py-2 xsm:w-[8rem] rounded-3xl"
+            >
               Sign Up
-            </h2>
+            </Link>
           </div>
 
           {/* Mobile nav */}
@@ -76,9 +82,12 @@ const Navbar = () => {
                   Log in
                 </h2>
 
-                <h2 className="bg-secondary flex gap-2 items-center justify-center py-2 w-36 rounded-3xl mt-2">
+                <Link
+                  to={"/register"}
+                  className="bg-secondary flex gap-2 items-center justify-center py-2 w-36 rounded-3xl mt-2"
+                >
                   Sign Up
-                </h2>
+                </Link>
               </div>
               {/* <li className="hover:cursor-pointer hover:text-Lightgrey">
               <AnchorLink

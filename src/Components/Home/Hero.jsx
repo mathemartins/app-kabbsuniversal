@@ -3,7 +3,7 @@ import {
   GoogleplayDownload,
   AppstoreDownload,
   HeroPhone,
-} from "../assets/index";
+} from "../../assets/index.js";
 
 const Hero = () => {
   return (

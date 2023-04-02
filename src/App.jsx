@@ -1,18 +1,21 @@
 import React from "react";
-import Navbar from "./Components/NavBar/Navbar";
-import Hero from "./Components/Hero";
-import Payment from "./Components/Payment";
-import EarnSection from "./Components/EarnSection";
-import Footer from "./Components/Footer";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./Components/Home/HomePage";
+import Register from "./Components/Register/Register";
+import Login from "./Components/Login/Login";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 export default function App(props) {
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <Payment />
-      <EarnSection />
-      <Footer />
+      <Routes>
+        <Route path="/">
+          <Route index element={<HomePage />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/sign-in" element={<Login />} />
+        </Route>
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
     </div>
   );
 }
