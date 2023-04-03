@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   UserSigninPopup,
@@ -7,6 +7,7 @@ import {
 } from "../../Utilities/Firebase/Firebase.js";
 import ReactLoading from "react-loading";
 import { FaTimes } from "react-icons/fa";
+import { UserContexts } from "../../contexts/UserContext.jsx";
 
 const defaultFormFields = {
   displayName: "",
@@ -18,7 +19,7 @@ const defaultFormFields = {
 const Register = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || "/sign-in";
+  const from = location.state?.from?.pathname || "/dashboard";
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,6 +29,8 @@ const Register = () => {
 
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
+
+  const { setCurrentUser } = useContext(UserContexts);
 
   React.useEffect(
     function () {
@@ -63,7 +66,10 @@ const Register = () => {
       setIsLoading(true);
       const { user } = await createAuthUserWithEAndP(email, password);
       await createUserDocumentFromAuth(user, { displayName });
+      localStorage.setItem("displayName", displayName);
+      localStorage.setItem("email", email);
       navigate(from, { replace: true });
+      setCurrentUser(user);
       resetFormFields();
       setIsLoading(false);
     } catch (error) {
@@ -108,7 +114,7 @@ const Register = () => {
         </article>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-2 justify-center rounded-xl w-full  sm:w-[70%] mx-auto bg-greyFive p-4"
+          className="flex flex-col gap-2 justify-center items-center rounded-xl w-full  sm:w-[80%] mx-auto bg-greyFive p-4"
         >
           <p
             ref={errorRef}
@@ -124,21 +130,21 @@ const Register = () => {
             {errorMsg}
           </p>
 
-          <div className="flex flex-col ss:flex-row sm:items-center gap-3 bg-mainWhite rounded-2xl px-3 py-2 w-full">
-            <label className="font-semibold">Username :</label>
+          <div className="flex flex-col ss:flex-row sm:items-center gap-3 bg-mainWhite rounded-2xl px-3 py-2 w-full ">
+            <label className="font-semibold w-[25%] ">FullName :</label>
             <input
               type="text"
-              placeholder="JohnyKabbs"
+              placeholder="Enter your firstname and lastname"
               required
               onChange={handleChange}
               name="displayName"
               value={displayName}
-              className="rounded-2xl ss:px-3 sm:py-1 border border-darkOrange px-2 py-1 ss:border-none"
+              className="rounded-2xl ss:px-3 sm:py-1  px-2 py-2  bg-greyEight ss:w-[70%]"
             />
           </div>
 
           <div className="flex flex-col ss:flex-row sm:items-center gap-3 bg-mainWhite rounded-2xl px-3 py-2 w-full">
-            <label className="font-semibold">Email :</label>
+            <label className="font-semibold w-[25%] ">Email :</label>
             <input
               type="email"
               placeholder="kabbs123@gmail.com"
@@ -146,12 +152,12 @@ const Register = () => {
               onChange={handleChange}
               name="email"
               value={email}
-              className="rounded-2xl ss:px-3 sm:py-1 border border-darkOrange px-2 py-1 ss:border-none"
+              className="rounded-2xl ss:px-3 sm:py-1  px-2 py-2  bg-greyEight ss:w-[70%]"
             />
           </div>
 
           <div className="flex flex-col ss:flex-row sm:items-center gap-3 bg-mainWhite rounded-2xl px-3 py-2 w-full">
-            <label className="font-semibold">Password :</label>
+            <label className="font-semibold w-[25%]">Password :</label>
             <input
               type="password"
               placeholder="enter your password"
@@ -159,12 +165,12 @@ const Register = () => {
               onChange={handleChange}
               name="password"
               value={password}
-              className="rounded-2xl ss:px-3 sm:py-1 border border-darkOrange py-1 px-2 ss:border-none"
+              className="rounded-2xl ss:px-3 sm:py-1  px-2 py-2  bg-greyEight ss:w-[70%]"
             />
           </div>
 
           <div className="flex flex-col ss:flex-row sm:items-center gap-3 bg-mainWhite rounded-2xl px-3 py-2 w-full">
-            <label className="font-semibold">Confirm Password:</label>
+            <label className="font-semibold w-[25%] ">Confirm Password:</label>
             <input
               type="password"
               placeholder="Confirm password"
@@ -172,7 +178,7 @@ const Register = () => {
               onChange={handleChange}
               name="confirmPassword"
               value={confirmPassword}
-              className="rounded-2xl ss:px-3 sm:py-1 border border-darkOrange px-2 py-1 ss:border-none"
+              className="rounded-2xl ss:px-3 sm:py-1  px-2 py-2  bg-greyEight ss:w-[70%]"
             />
           </div>
 
