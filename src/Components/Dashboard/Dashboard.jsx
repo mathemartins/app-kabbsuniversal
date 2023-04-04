@@ -7,10 +7,16 @@ import InputFieldTwo from "../Inputs/InputFieldTwo";
 import { MdNotInterested } from "react-icons/md";
 import ActionButton from "../Inputs/ActionButton";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import GuideCard from "../Cards/GuideCard";
 import LogoutModal from "../Modal/LogoutModal";
 import { Popover } from "@headlessui/react";
 import ReactLoading from "react-loading";
-import { Arrowdown2, profilePicture } from "../../assets/index";
+import {
+  Arrowdown2,
+  profilePicture,
+  limitkey,
+  guide1,
+} from "../../assets/index";
 
 const Dashboard = () => {
   const fullName = localStorage.getItem("displayName");
@@ -78,8 +84,8 @@ const Dashboard = () => {
                         to="#"
                         className={
                           splitLocation[1] === "settings"
-                            ? "py-3 px-3 bg-gradedBlue bg-opacity-30 text-base"
-                            : "py-3 px-3 text-base"
+                            ? "py-3 px-3 bg-gradedBlue bg-opacity-30 text-base text-greyFive"
+                            : "py-3 px-3 text-base text-greyFive"
                         }
                       >
                         Settings
@@ -99,7 +105,7 @@ const Dashboard = () => {
                       {`Welcome back, ${fullName}`}
                     </h3>
                     <p className="text-greyFive text-[14px] sm:text-[16px] font-semibold">
-                      Happy Building
+                      Enjoy Your Ride
                     </p>
                   </div>
                 </div>
@@ -141,8 +147,8 @@ const Dashboard = () => {
                           to="#"
                           className={
                             splitLocation[2] === "settings"
-                              ? "py-3 px-3 bg-gradedBlue bg-opacity-30 text-base"
-                              : "py-3 px-3 text-base"
+                              ? "py-3 px-3 bg-gradedBlue bg-opacity-30 text-base text-greyFive"
+                              : "py-3 px-3 text-base text-greyFive"
                           }
                         >
                           Settings
@@ -159,12 +165,54 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
+            <div className="p-5 group border border-greySeven bg-[#FAFAFF] hover:bg-primary text-secondary hover:text-greySeven">
+              <img
+                src={limitkey}
+                alt=""
+                className="w-[50%] h-[10rem] mx-auto"
+              />
+              <div className="flex flex-col gap-4 mt-8 items-center">
+                <h2 className=" ">Web Development in progress</h2>
+                <ReactLoading
+                  type={"spin"}
+                  color={"rgba(197, 202, 255, 0.75)"}
+                  height={20}
+                  width={20}
+                  className=" "
+                />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* GUIDE */}
         <div className="col-span-1 bg:col-span-2 border border-greySeven rounded-md py-5 px-5 sm:px-2 bg-mainWhite">
           <h3 className="mb-5 font-bold text-lg text-mainBlack">Guides</h3>
+
+          <div className="w-full mb-10">
+            <GuideCard
+              image={guide1}
+              duration="2 min read"
+              text="How to get started with Kabbs Universal"
+            />
+
+            {/* <GuideCard
+              image={guide1}
+              duration="2 min read"
+              text="How to get started with Kabbs Universal"
+            /> */}
+
+            {/* <GuideCard
+              image={Guide2}
+              duration="6 min read"
+              text="How to get started with blockain on blockterium"
+            />
+            <GuideCard
+              image={Guide2}
+              duration="6 min read"
+              text="How to get started with blockain on blockterium"
+            /> */}
+          </div>
         </div>
       </div>
       {/* <h1>Welcome to Kabbs Universal Dashboard </h1>

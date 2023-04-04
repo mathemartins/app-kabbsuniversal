@@ -26,7 +26,7 @@ module.exports = {
         greyEight: "#F7F7F7",
         greyNine: "#4E4E4E",
         greyTen: "#606F7B",
-        lightBlue: "rgba(13, 59, 190, 0.22);",
+        lightBlue: "rgba(13, 59, 190, 0.22)",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

@@ -16,3 +16,5 @@ export { default as profilePicture } from "./profilePicture2.svg";
 export { default as dbIcon } from "./inactive-dashboard.svg";
 export { default as dbActive } from "./dashaboard-colored.svg";
 export { default as Arrowdown2 } from "./arrowdown2.svg";
+export { default as guide1 } from "./guide1.svg";
+export { default as limitkey } from "./limitkey.svg";
