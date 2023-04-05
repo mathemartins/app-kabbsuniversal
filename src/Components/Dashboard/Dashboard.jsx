@@ -165,6 +165,16 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
+            <div className="flex xs:hidden overflow-hidden bg-red-400"></div>
+            <div className="hidden xs:grid grid-cols-1 border-t relative text-mainBlack w-full border-t-greySeven mt-6">
+              <div className="flex py-4 items-center flex-col sm:flex-row">
+                <span className="text-greyTen ml-2 font-medium">
+                  Number of registered vehicle:
+                </span>
+                <h6 className="text-center text-[14px] font-bold ml-2">2655</h6>
+              </div>
+            </div>
+
             <div className="p-5 group border border-greySeven bg-[#FAFAFF] hover:bg-primary text-secondary hover:text-greySeven">
               <img
                 src={limitkey}
