@@ -23,7 +23,7 @@ const Login = ({ displayName }) => {
   const [errorMsg, setErrorMsg] = React.useState("");
   const [emailError, setEmailError] = React.useState("");
   const errorRef = React.useRef();
-  console.log(displayName);
+
   const [isLoading, setIsLoading] = useState(false);
 
   const [formFields, setFormFields] = useState(defaultFormFields);
@@ -47,6 +47,8 @@ const Login = ({ displayName }) => {
   const logGoogleUser = async () => {
     const { user } = await UserSigninPopup();
     createUserDocumentFromAuth(user);
+    localStorage.setItem("email", email);
+    navigate(from, { replace: true });
   };
 
   const resetFormFields = () => {

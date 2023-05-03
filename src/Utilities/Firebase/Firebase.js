@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import {
   getAuth,
   signInWithPopup,
@@ -12,16 +13,18 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDSkusLB9jTQHdpM0nep_92MU6S48y7jEw",
-  authDomain: "kabbs-db.firebaseapp.com",
-  projectId: "kabbs-db",
-  storageBucket: "kabbs-db.appspot.com",
-  messagingSenderId: "337434944169",
-  appId: "1:337434944169:web:4f7c95b280a9e91f9cbfb8",
+  apiKey: "AIzaSyCn2tSTHL6OuA81-nmSNBD_6UJ7vqfnmBI",
+  authDomain: "kabbsuniversal-6efda.firebaseapp.com",
+  databaseURL: "https://kabbsuniversal-6efda-default-rtdb.firebaseio.com",
+  projectId: "kabbsuniversal-6efda",
+  storageBucket: "kabbsuniversal-6efda.appspot.com",
+  messagingSenderId: "149772945905",
+  appId: "1:149772945905:web:b92b928062231bf263dc50",
+  measurementId: "G-29JX5K8EVJ",
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const provider = new GoogleAuthProvider();
 

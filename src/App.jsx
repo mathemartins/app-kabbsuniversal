@@ -6,6 +6,7 @@ import Login from "./Components/Login/Login";
 // import Dashboard from "./Components/Dashboard/Dashboard";
 import SideBar from "./Components/Containers/SideBar";
 import DashboardHome from "./Components/Dashboard/DashboardHome";
+import Test from "./Components/test/Test";
 
 export default function App(props) {
   return (
@@ -15,6 +16,7 @@ export default function App(props) {
           <Route index element={<HomePage />} />
           <Route path="/register" element={<Register />} />
           <Route path="/sign-in" element={<Login />} />
+          <Route path="/test" element={<Test />} />
         </Route>
 
         <Route path="/dashboard" element={<SideBar />}>
