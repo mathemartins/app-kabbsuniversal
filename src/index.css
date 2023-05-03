@@ -153,7 +153,6 @@
 }
 .log {
   background: #fdd206;
-  height: 100vh;
 }
 .road {
   position: relative;
@@ -208,30 +207,26 @@
   box-shadow: -10px 10px rgba(0, 0, 0, 0.25);
   transform-style: preserve-3d;
   perspective: 800px;
-  animation: animate_taxi 6s linear infinite;
+  animation: animate_taxi 10s linear infinite;
 }
 
 @keyframes animate_taxi {
   0% {
-    transform: translateX(300px) translateY(40px);
+    transform: translateX(200px) translateY(-10px);
   }
-  15% {
-    transform: translateX(300px) translateY(40px);
-  }
+
   25% {
-    transform: translateX(300px) translateY(40px);
+    transform: translateX(210px) translateY(40px);
   }
   50% {
-    transform: translateX(310px) translateY(-40px);
+    transform: translateX(220px) translateY(40px);
   }
   75% {
-    transform: translateX(330px) translateY(-40px);
+    transform: translateX(230px) translateY(40px);
   }
-  85% {
-    transform: translateX(320px) translateY(-20px);
-  }
+
   100% {
-    transform: translateX(300px) translateY(40px);
+    transform: translateX(240px) translateY(40px);
   }
 }
 
@@ -353,30 +348,30 @@
   box-shadow: -10px 10px rgba(0, 0, 0, 0.25);
   transform-style: preserve-3d;
   perspective: 800px;
-  animation: animate_taxii 5s linear infinite;
+  animation: animate_taxii 25s linear infinite;
 }
 
 @keyframes animate_taxii {
   0% {
-    transform: translateX(10px) translateY(-40px);
+    transform: translateX(12px) translateY(-40px);
   }
   15% {
-    transform: translateX(10px) translateY(-20px);
+    transform: translateX(12px) translateY(-40px);
   }
   25% {
-    transform: translateX(10px) translateY(-10px);
+    transform: translateX(13px) translateY(-40px);
   }
   50% {
-    transform: translateX(11px) translateY(40px);
+    transform: translateX(14px) translateY(-40px);
   }
   75% {
-    transform: translateX(13px) translateY(40px);
+    transform: translateX(13px) translateY(-40px);
   }
   85% {
-    transform: translateX(11px) translateY(20px);
+    transform: translateX(12px) translateY(-20px);
   }
   100% {
-    transform: translateX(10px) translateY(-40px);
+    transform: translateX(12px) translateY(-40px);
   }
 }
 
