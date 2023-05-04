@@ -45,10 +45,17 @@ const Login = ({ displayName }) => {
   };
 
   const logGoogleUser = async () => {
-    const { user } = await UserSigninPopup();
-    createUserDocumentFromAuth(user);
-    localStorage.setItem("email", email);
-    navigate(from, { replace: true });
+    try {
+      const { user } = await UserSigninPopup();
+      createUserDocumentFromAuth(user);
+      const displayName = user.displayName;
+      const email = user.email;
+      // console.log(myGoogleEmail);
+      // console.log(myGoogleDisplayName);
+      localStorage.setItem("email", email);
+      localStorage.setItem("displayName", displayName);
+      navigate(from, { replace: true });
+    } catch (error) {}
   };
 
   const resetFormFields = () => {
@@ -90,7 +97,7 @@ const Login = ({ displayName }) => {
         </Link>
       </nav>
 
-      <section className="flex flex-col justify-center items-center md:flex-row bg-primaryYellow h-[100vh] md:bg-greyThree ">
+      <section className="flex flex-col justify-center items-center md:flex-row bg-primaryYellow px-3 ss:px-6 sm:px-12 md:px-0  md:bg-greyThree ">
         <div className="log md:h-[100vh] md:w-[50%] w-full pt-24 sm:px-12 lg:px-[6rem] xl:px-[10rem] flex flex-col md:justify-between">
           <div>
             <article>
@@ -194,6 +201,7 @@ const Login = ({ displayName }) => {
 
             <div className="flex flex-col justify-center items-center">
               <button
+                type="button"
                 onClick={logGoogleUser}
                 className="bg-greySeven w-full text-mainBlack rounded-2xl px-2 py-2 my-1 flex items-center justify-center gap-2 font-semibold"
               >
@@ -209,6 +217,9 @@ const Login = ({ displayName }) => {
             </span>
           </h2>
         </div>
+        <p className="text-[13px] my-6 text-center  md:hidden">
+          Copyright &copy; 2023 Kabbs Universal. All Rights Reserved
+        </p>
       </section>
     </>
   );
