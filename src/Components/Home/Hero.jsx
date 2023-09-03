@@ -16,8 +16,10 @@ const Hero = () => {
         <div>
           <p className="mb-4 text-[12px] ml-2">Get the kabbs Universal app</p>
           <div className="flex gap-4">
-            <img src={GoogleplayDownload} alt="" className="h-10" />
-            <img src={AppstoreDownload} alt="" className="h-10" />
+            <a href="https://play.google.com/store/apps/details?id=com.kabbsuniversalrider" target="_blank">
+              <img src={GoogleplayDownload} alt="" className="h-10" />
+            </a>           
+             <img src={AppstoreDownload} alt="" className="h-10" />
           </div>
         </div>
       </div>

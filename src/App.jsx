@@ -2,11 +2,10 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./Components/Home/HomePage";
 import Register from "./Components/Register/Register";
-import Login from "./Components/Login/Login";
-// import Dashboard from "./Components/Dashboard/Dashboard";
 import SideBar from "./Components/Containers/SideBar";
 import DashboardHome from "./Components/Dashboard/DashboardHome";
 import Test from "./Components/test/Test";
+import ForRiders from "./Components/ForRiders/ForRiders";
 
 export default function App(props) {
   return (
@@ -15,7 +14,7 @@ export default function App(props) {
         <Route path="/">
           <Route index element={<HomePage />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/sign-in" element={<Login />} />
+          <Route path="/for-riders" element={<ForRiders />} />
           <Route path="/test" element={<Test />} />
         </Route>
 

@@ -50,17 +50,17 @@ const Navbar = () => {
           </ul>
           <div className="hidden xsm:flex gap-2 font-semibold">
             <Link
-              to={"/sign-in"}
+              to={"/for-riders"}
               className="bg-mainBlack border-[0.25px] border-mainWhite py-2 md:py-2 xsm:w-[8rem] rounded-3xl"
             >
-              Log in
+              For Riders
             </Link>
 
             <Link
               to={"/register"}
               className="bg-secondary flex gap-2 items-center justify-center py-2 md:py-2 xsm:w-[8rem] rounded-3xl"
             >
-              Sign Up
+              For Drivers
             </Link>
           </div>
 
