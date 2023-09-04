@@ -30,7 +30,7 @@ const Navbar = () => {
               />
             </Link> */}
 
-            <h2 className="text-[18px] font-bold">Kabbs Universal</h2>
+            <h2 className="text-[18px] font-bold">KABBS Universal</h2>
 
             <div onClick={() => setOpen(!open)} className="xsm:hidden text-xl">
               {open ? <FaTimes /> : <FaBars />}

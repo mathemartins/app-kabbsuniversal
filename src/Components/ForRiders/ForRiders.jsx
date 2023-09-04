@@ -1,11 +1,12 @@
-import { Navbar,HeroSection,Footer } from "../Home";
+import { Navbar,Footer } from "../Home";
 import WhiteSpace from "./WhiteSpace";
+import RidersHero from "./ridersHeroSection";
 
 const ForRiders = () => {
     return (
       <div>
         <Navbar />
-        <HeroSection />
+        <RidersHero />
         <WhiteSpace />
         <Footer />
       </div>

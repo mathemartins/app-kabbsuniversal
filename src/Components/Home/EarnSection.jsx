@@ -20,8 +20,8 @@ const EarnSection = () => {
       <div className="flex items-center justify-between gap-4">
         <img src={star} alt="" className="h-24" />
         <div>
-          <h2 className="font-semibold">Reliable Rides</h2>
-          <p>
+          <h2 className="font-semibold ml-4">Reliable Rides</h2>
+          <p className="ml-4">
             You’ll see your driver’s contact details and can rate them at the
             end of the trip. Your feedback helps us keep the best drivers
           </p>
