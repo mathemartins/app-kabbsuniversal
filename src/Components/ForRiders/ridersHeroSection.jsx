@@ -24,7 +24,7 @@ const RidersHero = () => {
         </div>
       </div>
 
-      <div className="bg-lightBlue text-mainBlack px-6 pt-10 sm:pb-24 xsm:pb-36 pb-10 ">
+      <div className="bg-lightBlue text-mainBlack px-6 pt-10 sm:pb-24 xsm:pb-36 pb-8 ">
         <article className=" sm:w-[40%]">
           <p className="font-semibold text-[18px] mb-6">How to book</p>
           <p className="text-[14px]">
