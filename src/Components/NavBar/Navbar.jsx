@@ -30,7 +30,7 @@ const Navbar = () => {
               />
             </Link> */}
 
-            <h2 className="text-[18px] font-bold">KABBS Universal</h2>
+            <h2 className="text-[18px] font-bold cursor-pointer">KABBS Universal</h2>
 
             <div onClick={() => setOpen(!open)} className="xsm:hidden text-xl">
               {open ? <FaTimes /> : <FaBars />}
@@ -43,10 +43,10 @@ const Navbar = () => {
             <Resources />
             <Price /> */}
 
-            <li>Home</li>
-            <li>Products</li>
-            <li>Contact</li>
-            <li>About Us</li>
+            <li className="cursor-pointer">Home</li>
+            <li className="cursor-pointer">Products</li>
+            <li className="cursor-pointer">Contact</li>
+            <li className="cursor-pointer">About Us</li>
           </ul>
           <div className="hidden xsm:flex gap-2 font-semibold">
             <Link
