@@ -57,7 +57,7 @@ const Navbar = () => {
             </Link>
 
             <Link
-              to={"/register"}
+              to={"/for-drivers"}
               className="bg-secondary flex gap-2 items-center justify-center py-2 md:py-2 xsm:w-[8rem] rounded-3xl"
             >
               For Drivers
