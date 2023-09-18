@@ -30,7 +30,11 @@ const Navbar = () => {
               />
             </Link> */}
 
-            <h2 className="text-[18px] font-bold cursor-pointer">KABBS Universal</h2>
+            <Link className="text-[18px] font-bold cursor-pointer"
+              to={"/"}
+            >
+              KABBS Universal
+            </Link>
 
             <div onClick={() => setOpen(!open)} className="xsm:hidden text-xl">
               {open ? <FaTimes /> : <FaBars />}
@@ -43,10 +47,31 @@ const Navbar = () => {
             <Resources />
             <Price /> */}
 
-            <li className="cursor-pointer">Home</li>
-            <li className="cursor-pointer">Products</li>
-            <li className="cursor-pointer">Contact</li>
-            <li className="cursor-pointer">About Us</li>
+            <Link
+              to={"/"}
+              >
+                Home
+              </Link>
+              <Link
+              to={"/products"}
+              >
+                Products
+              </Link>
+              <Link
+              to={"/contacts"}
+              >
+                Contact
+              </Link>
+              <Link
+              to={"/about-us"}
+              >
+                About Us
+              </Link>
+              <Link
+              to={"/FAQ"}
+              >
+                F A Q
+              </Link>
           </ul>
           <div className="hidden xsm:flex gap-2 font-semibold">
             <Link
@@ -76,17 +101,19 @@ const Navbar = () => {
               <li>Products</li>
               <li>Contact</li>
               <li>About Us</li>
+              <li>F A Q</li>
+              
 
               <div className="font-semibold mt-12">
                 <h2 className="bg-mainBlack border-[0.25px] border-mainWhite py-2 w-36 rounded-3xl">
-                  Log in
+                  For riders
                 </h2>
 
                 <Link
-                  to={"/register"}
+                  to={"/for-drivers"}
                   className="bg-secondary flex gap-2 items-center justify-center py-2 w-36 rounded-3xl mt-2"
                 >
-                  Sign Up
+                  For drivers
                 </Link>
               </div>
               {/* <li className="hover:cursor-pointer hover:text-Lightgrey">
