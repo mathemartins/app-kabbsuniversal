@@ -97,17 +97,39 @@ const Navbar = () => {
         duration-500 ${open ? "right-0 " : "right-[-100%] "}
        `}
             >
-              <li>Home</li>
-              <li>Products</li>
-              <li>Contact</li>
-              <li>About Us</li>
-              <li>F A Q</li>
+              <Link
+                to={"/"}
+              >
+                Home
+              </Link>
+              <Link
+                to={"/products"}
+              >
+                Products
+              </Link>
+              <Link
+                to={"/contacts"}
+              >
+                Contact
+              </Link>
+              <Link
+                to={"/about-us"}
+              >
+                About Us
+              </Link>
+              <Link
+                to={"/FAQ"}
+              >
+                F A Q
+              </Link>
               
 
               <div className="font-semibold mt-12">
-                <h2 className="bg-mainBlack border-[0.25px] border-mainWhite py-2 w-36 rounded-3xl">
+                <Link 
+                  to={"/for-riders"}
+                  className="bg-mainBlack border-[0.25px] border-mainWhite py-2 w-36 rounded-3xl">
                   For riders
-                </h2>
+                </Link>
 
                 <Link
                   to={"/for-drivers"}
